@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Firestore } = require('@google-cloud/firestore');
 
 const db = new Firestore();
-const collectionName = 'predictions';
+const collectionName = process.env.FIRESTORE_COLLECTION;
 
 const savePrediction = async (data) => {
   try {
