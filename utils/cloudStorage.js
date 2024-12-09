@@ -7,7 +7,7 @@ const storage = new Storage();
 
 const loadCloudStorageModel = async () => {
   try {
-    const modelUrl = `https://storage.googleapis.com/cancer-bucker-ade/model/model.json`;
+    const modelUrl = `https://storage.googleapis.com/${bucketName}/model.json`;
     console.log(`Loading model from URL: ${modelUrl}`);
     const model = await tf.loadGraphModel(modelUrl);
     console.log('Model loaded successfully');
