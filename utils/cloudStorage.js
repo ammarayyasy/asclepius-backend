@@ -3,7 +3,7 @@ const { Storage } = require('@google-cloud/storage');
 const tf = require('@tensorflow/tfjs-node');
 
 const storage = new Storage();
-// const bucketName = process.env.CLOUD_STORAGE_BUCKET_NAME;
+const bucketName = process.env.CLOUD_STORAGE_BUCKET_NAME;
 
 const loadCloudStorageModel = async () => {
   try {
